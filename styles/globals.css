@@ -1,16 +1,69 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, 'Oswald';
+	background: #1e1e1e;
+	color: white;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
+
+/* Aquí comienza la diversión */
+.container-index {
+	width: 100%;
+	max-width: 1200px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 10px;
+	overflow-x: hidden;
+	scroll-snap-type: mandatory;
+	scroll-snap-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.index-title {
+	font-size: 5em;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	transition: 500ms;
+	cursor: default;
+	user-select: none;
+}
+
+.index-title span {
+	color: #5a8aff;
+	transition: color 500ms;
+}
+
+.index-subtitle {
+	line-height: 0%;
+	text-align: center;
+	user-select: none;
+}
+
+
+.index-title:hover {
+	font-size: 5.5em;
+	transition: 500ms;
+	color: #5a8aff;
+}
+
+.index-title:hover span {
+	color: white;
+	transition: color 500ms;
 }
