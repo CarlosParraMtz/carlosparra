@@ -61,11 +61,15 @@ h2 {
     color: #1f9cd6;
 }
 
+#about {
+    margin-bottom: 50px;
+}
+
 #about p {
     font-size: 1.5em;
     text-align: center;
+    margin: 100px 0;
 }
-
 
 #skills {
     background: #2e2e3f;
