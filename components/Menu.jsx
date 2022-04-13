@@ -6,11 +6,11 @@ export default function Menu() {
 
     return (
         <div className='index-menu' >
-            <button className="index-menu-item" onClick={()=>Router.push('/work')} >
+            <button className="index-menu-item" onClick={()=>Router.push('/work#about')} >
                 <img src='/images/icons/programmer.png' width='50px' alt='Sobre mí' />
                 <p>Sobre mí</p>
             </button>
-            <button className="index-menu-item" onClick={()=>Router.push('/work')} >
+            <button className="index-menu-item" onClick={()=>Router.push('/work#skills')} >
                 <img src='/images/icons/technology.png' width='50px' alt='Sobre mí' />
                 <p>Tecnologías</p>
             </button>

@@ -22,16 +22,28 @@ export default function Work() {
 					</p>
 				</div>
 			</section>
+
 			<section id='skills' >
 				<h2>Mis herramientas:</h2>
 				<div className='skills-container' >
 					<SkillCard file='html-5' titulo='HTML' />
 					<SkillCard file='css-3' titulo='CSS' />
 					<SkillCard file='js' titulo='JavaScript' />
+					<SkillCard file='node' titulo='Node JS' />
 					<SkillCard file='physics' titulo='React JS' />
-
+					<SkillCard file='next' titulo='Next JS' />
+					<SkillCard file='recoil' titulo='Recoil JS' />
+					<SkillCard file='mui' titulo='Material UI' />
+					<SkillCard file='mdx' titulo='Markdown X' />
 				</div>
 			</section>
+
+			<section id='soft-skills'>
+				<div className='work-text-container' >
+					<h2>Soft-skills</h2>
+				</div>
+			</section>
+
 		</div>
 	)
 }
