@@ -74,7 +74,13 @@ h2 {
 #skills {
     background: #2e2e3f;
     box-shadow: 0 0 10px black;
-    padding-bottom:70px;
+    padding-bottom: 70px;
+}
+
+@media (min-width: 900px) {
+    #skills {
+        clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+    }
 }
 
 #skills h2 {
@@ -82,12 +88,12 @@ h2 {
 }
 
 .skills-container {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width:100%;
+    width: 100%;
     max-width: 900px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .skill-card {
