@@ -75,6 +75,7 @@ h2 {
     background: #2e2e3f;
     box-shadow: 0 0 10px black;
     padding-bottom: 70px;
+    width:100%;
 }
 
 @media (min-width: 900px) {

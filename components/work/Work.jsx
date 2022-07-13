@@ -29,7 +29,7 @@ export default function Work() {
 							cosas nuevas</b></span>.
 					</p>
 					<p data-aos="zoom-in-right" data-aos-duration="500" >
-						Como desarrollador front-end estoy enfocado en la creación de interfaces de usuario <b><span className='work-p-blue'>atractivas</span>,
+						Como desarrollador front-end estoy enfocado en la creación de interfaces de usuario <b><span className='work-p-blue'>atractivas,</span>
 							<span className='work-p-blue' > simples </span>, <span className='work-p-blue' >intuitivas</span></b> y <b><span className='work-p-red' >funcionales</span></b>.
 					</p>
 				</div>
