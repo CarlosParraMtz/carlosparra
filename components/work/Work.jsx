@@ -35,7 +35,7 @@ export default function Work() {
 				</div>
 			</section>
 
-			<section id='skills' data-aos="zoom-out-up" data-aos-duration="1200" >
+			<section id='skills' >
 				<h2>Mis herramientas:</h2>
 				<div className='skills-container' >
 					<SkillCard file='node.png' titulo='Node JS' />

@@ -75,7 +75,7 @@ h2 {
     background: #2e2e3f;
     box-shadow: 0 0 10px black;
     padding-bottom: 70px;
-    min-width:100%;
+    min-width: 100%;
 }
 
 @media (min-width: 900px) {
@@ -117,4 +117,20 @@ h2 {
 .skill-card h3 {
     font-size: 1em;
     line-height: 0%;
+}
+
+.dialog-container {
+    background: #1e1e2f;
+    height: 100%;
+    color: white;
+}
+
+.bar-dialog {
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.dialog-body {
+    padding:10px;
 }
