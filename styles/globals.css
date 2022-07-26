@@ -15,6 +15,8 @@ a {
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 /* 
@@ -31,12 +33,13 @@ paleta de colores usada:
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
 
 
+
+
 /* Aquí comienza la diversión */
+
 .container-index {
 	width: 100%;
-	height: 100vh;
 	margin: 0 auto;
-	padding: 10px;
 	overflow: hidden;
 	scroll-snap-type: mandatory;
 	scroll-snap-align: center;
@@ -46,68 +49,116 @@ paleta de colores usada:
 	justify-content: center;
 }
 
+p {
+	text-align: justify;
+	hyphens: auto;
+	font-size: 1.5em;
+}
+
+@media (max-width:992px) {
+	p {
+		text-align: center;
+	}
+}
+
+h4 {
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+
+section {
+	padding-left: 160px;
+	padding-right: 160px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+section h2 {
+	font-size: 4.5em;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+section h2::after {
+	content: "";
+	display: block;
+	width: 90px;
+	height: 3px;
+	background: #1f9cd6;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+@media (max-width:992px) {
+	section {
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	section h2 {
+		font-size: 3em;
+		font-family: 'Oswald', sans-serif;
+		text-align: center;
+	}
+}
+
+
+#portada {
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, #000 0%,#1e1e2f 70%, #2e2e3f55 90%, #145c80 100%);
+}
+
+
+#portada div {
+	width: 100%;
+	max-width: 1100px;
+
+}
+
+
 .index-title {
 	font-size: 5em;
 	font-family: 'Oswald', sans-serif;
-	text-align: center;
+	text-align: left;
 	transition: 500ms;
-	cursor: pointer;
 	user-select: none;
-	animation: diving 2s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
-	position:relative;
-	bottom: 100px;
+	/* animation: diving 2s ease-in-out infinite, diving-rotate 3s ease-in-out infinite; */
 }
+
+
 
 .index-title span {
 	color: #1f9cd6;
 	transition: color 500ms;
 }
 
-
-@keyframes diving {
-	0% {
-		margin-top: 5px;
-	}
-
-	50% {
-		margin-top: 15px;
-	}
-
-	100% {
-		margin-top: 5px;
-	}
-}
-
-@keyframes diving-rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	50% {
-		transform: rotate(2deg);
-	}
-
-	75% {
-		transform: rotate(-1deg);
-	}
-
-	100% {
-		transform: rotate(0deg);
-	}
-}
-
-
 .index-subtitle {
-	line-height: 0%;
-	text-align: center;
 	user-select: none;
-	position:absolute;
-	bottom:200px;
+}
+
+@media (max-width:992px) {
+	.index-title {
+		text-align: center;
+		font-size: 3em;
+	}
+
+	.index-subtitle {
+		text-align: center;
+	}
 }
 
 
 .index-title:hover {
-	font-size: 5.5em;
 	transition: 500ms;
 	color: #1f9cd6;
 }
@@ -115,4 +166,38 @@ paleta de colores usada:
 .index-title:hover span {
 	color: white;
 	transition: color 500ms;
+}
+
+@media (min-width:992px) {
+	.index-title:hover {
+		font-size: 5.5em;
+		transition: 500ms;
+		color: #1f9cd6;
+	}
+
+}
+
+
+.container-text {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.container-content {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+
+.img-circle {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.img-circle img {
+	clip-path: circle(43% at 50% 50%);
+	width: 100%;
+	
 }

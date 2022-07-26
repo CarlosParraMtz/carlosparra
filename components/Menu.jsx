@@ -10,6 +10,7 @@ export default function Menu({ setPag }) {
                 <img src='/images/icons/programmer.png' width='50px' alt='Sobre mí' />
                 <p>Sobre mí</p>
             </button>
+            
             <button className="index-menu-item" onClick={() => Router.push('/work#skills')} >
                 <img src='/images/icons/technology.png' width='50px' alt='Sobre mí' />
                 <p>Tecnologías</p>
