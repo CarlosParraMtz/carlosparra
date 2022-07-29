@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, Stack } from '@mui/material'
 
 export default function About() {
 	return (
@@ -31,11 +31,18 @@ export default function About() {
 			<div className="container-text">
 				
 				<p>
-					Soy desarrollador front-end con un año de experiencia en framew,
-					y estoy enfocado en la creación de páginas e interfaces de usuario
-					atractivas, simples y funcionales.
+					Soy desarrollador front-end con un año de experiencia en frameworks
+					como ReactJS y NextJS, y estoy enfocado en la creación de páginas e
+					interfaces de usuario atractivas, simples y funcionales.
 				</p>
+				<p>
+					Mi forma de trabajo, individual o en equipo, está enfocada en resultados,
+					lo cual me ha permitido trabajar con usuarios de forma muy positiva.
+				</p>				
+			</div>
 
+			<div className="container-content">
+				<h3>Mis herramientas:</h3>
 				
 			</div>
 
