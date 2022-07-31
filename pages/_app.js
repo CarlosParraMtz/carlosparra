@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import '../styles/index.menu.css'
 import '../styles/nuevoMenu.css'
 import '../styles/about.css'
+import '../styles/btncool.css'
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {

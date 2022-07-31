@@ -115,7 +115,7 @@ section h2::after {
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(180deg, #000 0%,#1e1e2f 70%, #2e2e3f55 90%, #145c80 100%);
+	background: linear-gradient(180deg, #000 0%, #1e1e2f 70%, #2e2e3f55 90%, #145c80 100%);
 }
 
 
@@ -182,6 +182,9 @@ section h2::after {
 	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .container-content {
@@ -199,5 +202,17 @@ section h2::after {
 .img-circle img {
 	clip-path: circle(43% at 50% 50%);
 	width: 100%;
-	
+
+}
+
+.dialog-fullscreen {
+	background: #2e2e3f;
+	width: 100%;
+	height: 100%;
+}
+
+.btn-dialog-container {
+	position: fixed;
+	top: 30px;
+	left: 30px;
 }
