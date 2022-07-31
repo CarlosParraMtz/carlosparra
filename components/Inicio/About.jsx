@@ -6,9 +6,7 @@ export default function About() {
 
 	const [open, setOpen] = useState(false)
 
-	const Transition = forwardRef(function Transition(props, ref) {
-		return <Slide direction="up" ref={ref} {...props} />;
-	});
+
 
 	return (
 		<section id='about' >
@@ -58,7 +56,7 @@ export default function About() {
 
 			</div>
 
-			<Dialog open={open} fullScreen TransitionComponent={Transition} >
+			<Dialog open={open} fullScreen >
 				<div className="dialog-fullscreen">
 					<div className="btn-dialog-container">
 						<IconButton
