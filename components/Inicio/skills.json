@@ -1,0 +1,17 @@
+[
+  {
+    "img": "/images/icons/firebase.svg",
+    "title": "Firebase",
+    "description": "Lo utilizo principalmente como base de datos, pero también por su eficacia como backend as a service."
+  },
+  {
+    "img": "/images/icons/react.png",
+    "title": "React.js",
+    "description": "Es mi framework principal para la construcción de la interfaz de usuario"
+  },
+  {
+    "img": "/images/icons/mui.png",
+    "title": "Material UI",
+    "description": "Esta maravillosa biblioteca de componentes me ayuda a crear de forma rápida algunos formatos de layout, de estilos y de otros elementos en pantalla"
+  }
+]

@@ -1,6 +1,7 @@
 import { useState, forwardRef } from 'react';
 import { Grid, Dialog, Stack, Slide, IconButton } from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import skills from './skills.json';
 
 export default function About() {
 
@@ -62,13 +63,38 @@ export default function About() {
 						<IconButton
 							onClick={() => setOpen(false)}
 							sx={{
-								background:'#145c80',
-								"&:hover": {background: "#1f9cd6"}
+								background: '#0f8cc6	',
+								"&:hover": { background: "#1f9cd6" }
 							}}
 						>
 							<ArrowBackIcon />
 						</IconButton>
 					</div>
+
+					<h2>Mis herramientas</h2>
+
+					{
+						skills.map((skill, index) => {
+							const par = index % 2
+							return (
+								<div className={`skill-section skill-color-${par}`} key={index}>
+									<div className="container-content">
+										<Grid container alignItems='center' >
+											<Grid item md={4} xs={12} >
+												<div className='skill-img-container' >
+													<img className='skill-img' src={skill.img} alt={skill.title} />
+												</div>
+											</Grid>
+											<Grid item md={8} xs={12} >
+												<h3>{skill.title} </h3>
+												<p> {skill.description} </p>
+											</Grid>
+										</Grid>
+									</div>
+								</div>
+							)
+						})
+					}
 
 
 
