@@ -6,44 +6,43 @@ import skills from './skills.json';
 export default function About() {
 
 	const [open, setOpen] = useState(false)
-
-
-
+	
 	return (
 		<section id='about' >
+			<h2> Sobre mí </h2>
 
-			<h2>
-				Sobre mí
-			</h2>
+
 
 			<div className="container-content">
 				<Grid container justifyContent='center' alignItems='center' >
 					<Grid item xs={9} sm={6} md={6} lg={6} >
-						<div className="img-circle">
+						<div className="img-circle" data-aos='fade-up' data-aos-delay='300' >
 							<img src="images/carlosparra.png" alt="Carlos Parra" />
 						</div>
 					</Grid>
 					<Grid item xs={12} md={10} lg={6}>
-						<p>
+						<p data-aos='fade-left' data-aos-delay='300' >
 							Soy un enorme fan de la tecnología y la programación.
 							Esto, mezclado con una experiencia de 9 años en diseño
 							gráfico, me han permitido crecer haciendo las cosas con
 							las que más cómodo me siento:
 						</p>
 
-						<h3><span>Resolver problemas</span> y <span>crear cosas nuevas.</span></h3>
+						<h3 data-aos='fade-up' data-aos-delay='300'>
+						<span>Resolver problemas</span> y <span>crear cosas nuevas.</span>
+						</h3>
 					</Grid>
 				</Grid>
 			</div>
 
 			<div className="container-text">
 
-				<p>
+				<p data-aos='fade-up' data-aos-delay='300' >
 					Soy desarrollador front-end con un año de experiencia en frameworks
-					como ReactJS y NextJS, y estoy enfocado en la creación de páginas e
+					como React.js y Next.js, y estoy enfocado en la creación de páginas e
 					interfaces de usuario atractivas, simples y funcionales.
 				</p>
-				<p>
+				<p data-aos='fade-up' data-aos-delay='300' >
 					Mi forma de trabajo, individual o en equipo, está enfocada en resultados,
 					lo cual me ha permitido trabajar con usuarios de forma muy positiva.
 				</p>
@@ -51,6 +50,7 @@ export default function About() {
 				<button
 					className='bttn-unite bttn-md'
 					onClick={() => setOpen(true)}
+					data-aos='fade-up' data-aos-delay='300'
 				>
 					<b>Mostrar mis herramientas</b>
 				</button>
@@ -71,7 +71,7 @@ export default function About() {
 						</IconButton>
 					</div>
 
-					<h2>Mis herramientas</h2>
+					<h2 id='tools' >Mis herramientas</h2>
 
 					{
 						skills.map((skill, index) => {

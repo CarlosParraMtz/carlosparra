@@ -1,17 +1,22 @@
 [
   {
-    "img": "/images/icons/firebase.svg",
-    "title": "Firebase",
-    "description": "Lo utilizo principalmente como base de datos, pero también por su eficacia como backend as a service."
-  },
-  {
     "img": "/images/icons/react.png",
     "title": "React.js",
-    "description": "Es mi framework principal para la construcción de la interfaz de usuario"
+    "description": "Es mi framework principal para la construcción de interfaces de usuario. Llevo utilizándolo más de un año."
+  },
+  {
+    "img": "/images/icons/next-logo.svg",
+    "title": "Next.js",
+    "description": "Facilita mucho trabajar con datos estáticos, lo cual contribuye a mejorar el posicionamiento en buscadores, y a que las páginas carguen mucho más rápido."
   },
   {
     "img": "/images/icons/mui.png",
     "title": "Material UI",
     "description": "Esta maravillosa biblioteca de componentes me ayuda a crear de forma rápida algunos formatos de layout, de estilos y de otros elementos en pantalla"
+  },
+  {
+    "img": "/images/icons/firebase.svg",
+    "title": "Firebase",
+    "description": "Lo utilizo principalmente como base de datos, pero también por su eficacia como backend as a service."
   }
 ]

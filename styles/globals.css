@@ -181,7 +181,6 @@ section h2::after {
 
 @media (min-width:992px) {
 	.index-title:hover {
-		font-size: 5.5em;
 		transition: 500ms;
 		color: #1f9cd6;
 	}
@@ -259,7 +258,7 @@ section h2::after {
 .skill-img-container {
 	max-width: 100%;
 	max-height: 200px;
-	padding:5px;
+	padding:20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -270,4 +269,13 @@ section h2::after {
 	height: 100%;
 	max-height: 200px;
 	margin: 0 auto;
+}
+
+
+
+
+
+/* * Sección de portafolios */
+#portfolio {
+	background:rgba(135, 140, 199, 0.1);
 }

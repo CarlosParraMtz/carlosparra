@@ -8,7 +8,7 @@ export default function NuevoMenu() {
                     <li>
                         <a href="#portada" className="nav-link">
                             <div>
-                                <img src='/images/icons/programmer.png' width='30px' alt='Sobre mí' />
+                                <img src='/images/icons/home.png' width='30px' alt='Home' />
                             </div>
                             <span>Inicio</span>
 
@@ -20,14 +20,6 @@ export default function NuevoMenu() {
                                 <img src='/images/icons/programmer.png' width='30px' alt='Sobre mí' />
                             </div>
                             <span>Sobre mí</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#techstack" className="nav-link">
-                            <div>
-                                <img src='/images/icons/technology.png' width='30px' alt='Sobre mí' />
-                            </div>
-                            <span>Tecnologías</span>
                         </a>
                     </li>
                     <li>
