@@ -2,7 +2,7 @@
   {
     "img": "/images/icons/react.png",
     "title": "React.js",
-    "description": "Es mi framework principal para la construcción de interfaces de usuario. Llevo utilizándolo más de un año."
+    "description": "Es mi framework principal para la construcción de interfaces de usuario."
   },
   {
     "img": "/images/icons/next-logo.svg",
@@ -12,7 +12,7 @@
   {
     "img": "/images/icons/mui.png",
     "title": "Material UI",
-    "description": "Esta maravillosa biblioteca de componentes me ayuda a crear de forma rápida algunos formatos de layout, de estilos y de otros elementos en pantalla"
+    "description": "Esta biblioteca de componentes me brinda rapidez para crear algunos formatos de layout, de estilos y de otros elementos en pantalla"
   },
   {
     "img": "/images/icons/firebase.svg",

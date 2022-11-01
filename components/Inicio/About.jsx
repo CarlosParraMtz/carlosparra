@@ -1,12 +1,41 @@
-import { useState, forwardRef } from 'react';
-import { Grid, Dialog, Stack, Slide, IconButton } from '@mui/material'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useState, useEffect } from 'react';
+import {
+	Card,
+	CardContent,
+	Collapse,
+	Dialog,
+	DialogContent,
+	DialogTitle,
+	Grid,
+	IconButton,
+	Slide,
+	Stack,
+} from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close';
 import skills from './skills.json';
 
 export default function About() {
 
 	const [open, setOpen] = useState(false)
-	
+	const [skillTitle, setSkillTitle] = useState('')
+	const [skillDescription, setSkillDescription] = useState('')
+	const [collapseOpen, setCollapseOpen] = useState(false)
+
+
+	useEffect(() => {
+		if (skillTitle != '') {
+			setCollapseOpen(true)
+		}
+	}, [skillTitle])
+
+
+	const cerrarDialog =()=>{
+		setOpen(false)
+		setSkillTitle('')
+		setSkillDescription('')
+		setCollapseOpen(false)
+	}
+
 	return (
 		<section id='about' >
 			<h2> Sobre mí </h2>
@@ -29,7 +58,7 @@ export default function About() {
 						</p>
 
 						<h3 data-aos='fade-up' data-aos-delay='300'>
-						<span>Resolver problemas</span> y <span>crear cosas nuevas.</span>
+							<span>Resolver problemas</span> y <span>crear cosas nuevas.</span>
 						</h3>
 					</Grid>
 				</Grid>
@@ -57,48 +86,82 @@ export default function About() {
 
 			</div>
 
-			<Dialog open={open} fullScreen >
-				<div className="dialog-fullscreen">
-					<div className="btn-dialog-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<Dialog
+				open={open}
+				fullWidth
+				onClose={cerrarDialog} >
+				<DialogTitle sx={{ background: "#2e2e3f" }} >
+					<div style={{ display: "flex", alignItems: "center", justifyContent: "center" }} >
+						<h2 id='tools' style={{ fontSize: "1.6em" }} >Mis principales herramientas</h2>
 						<IconButton
-							onClick={() => setOpen(false)}
+							onClick={cerrarDialog}
 							sx={{
+								ml: "auto",
+								position: "sticky", top: 0,
 								background: '#0f8cc6	',
 								"&:hover": { background: "#1f9cd6" }
 							}}
 						>
-							<ArrowBackIcon />
+							<CloseIcon />
 						</IconButton>
 					</div>
+				</DialogTitle>
+				<DialogContent sx={{ background: "#2e2e3f", color: "white" }}>
+					<Stack flexWrap="wrap" spacing={2} direction="row" justifyContent="center">
 
-					<h2 id='tools' >Mis herramientas</h2>
+						{
+							skills.map((skill, index) => {
+								return (
+									<Card key={index}
+										sx={{
+											background: "#145c80",
+											width: "100px",
+											height: "100px",
+											display: "flex",
+											alignItems: "center",
+											justifyContent: "center",
+											cursor:'pointer',
+											"&:hover": {
+												background: "#1f9cd6",
+												transition: "500ms"
+											}
+										}}
+										onClick={() => {
+											setSkillTitle(skill.title)
+											setSkillDescription(skill.description)
+										}}
+									>
+										<img className='skill-img' src={skill.img} alt={skill.title} />
+									</Card>
+								)
+							})
+						}
 
-					{
-						skills.map((skill, index) => {
-							const par = index % 2
-							return (
-								<div className={`skill-section skill-color-${par}`} key={index}>
-									<div className="container-content">
-										<Grid container alignItems='center' >
-											<Grid item md={4} xs={12} >
-												<div className='skill-img-container' >
-													<img className='skill-img' src={skill.img} alt={skill.title} />
-												</div>
-											</Grid>
-											<Grid item md={8} xs={12} >
-												<h3>{skill.title} </h3>
-												<p> {skill.description} </p>
-											</Grid>
-										</Grid>
-									</div>
-								</div>
-							)
-						})
-					}
 
 
+					</Stack>
 
-				</div>
+					<Collapse in={collapseOpen} sx={{ mt: 2 }} >
+						<h2 style={{ fontSize: "1.5em" }}> {skillTitle} </h2>
+						<p style={{ fontSize: "1.3em" }} > {skillDescription} </p>
+					</Collapse>
+				</DialogContent>
 			</Dialog>
 
 		</section>
