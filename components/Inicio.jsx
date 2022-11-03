@@ -1,28 +1,14 @@
 //* Módulos
 import { useEffect } from 'react';
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-//* Componentes
-import Menu from '../Menu';
-import NuevoMenu from '../NuevoMenu';
-import About from './About';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
 
 
 export default function Inicio() {
 
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-    }, []);
+
 
     return (
         <div className="container-index">
 
-            <Menu />
-            <NuevoMenu />
 
             <section id='portada' >
                 <div >
@@ -43,10 +29,6 @@ export default function Inicio() {
                 </div>
             </section>
 
-
-            <About />
-            <Portfolio />
-            <Contact />
 
 
         </div>
