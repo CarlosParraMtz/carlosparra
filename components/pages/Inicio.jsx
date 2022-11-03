@@ -1,3 +1,4 @@
+import ButtonRight from "../elements/ButtonRight"
 export default function Inicio() {
     return (
         <section id='portada' >
@@ -8,16 +9,14 @@ export default function Inicio() {
                 <p>
                     I'm a frontend web developer, graphic designer and
                     UI / UX specialist. Feel free to take a look at my
-                    lastest projects on the <b>web portfolio page</b>.
+                    latest projects on the <a href="/portfolio"><b>web portfolio page</b>.</a>
                 </p>
                 <p>
                     Remotely avaliable at UTC-6.
                 </p>
             </div>
 
-            <div id="portada-footer" />
-
-            
+            <ButtonRight link="/portfolio" title="Portfolio" />
 
         </section>
     )
