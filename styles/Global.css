@@ -13,7 +13,9 @@ Paleta de color:
 }
 
 body {
-    background: linear-gradient(180deg, #2a2a2a 0%, #1d1d1d 100%);
+    background: linear-gradient(180deg, #2a2a2a 90%, #1d1d1d 100%);
+    background-attachment: fixed;
+    color: #eaeaea;
 }
 
 a {
@@ -22,8 +24,9 @@ a {
     transition: all 0.2s;
 }
 
-section {
-    padding: 10px;
+h1 {
+    font-family: Oswald;
+    font-size: 2em;
 }
 
 a:hover {
@@ -31,8 +34,37 @@ a:hover {
     transition: all 0.2s;
 }
 
+.centered {
+    padding: 15px;
+    padding-top: 140px;
+    max-width: 900px;
+    margin:0 auto;
+    overflow: auto;
+}
+
+@media (max-width:600px){
+    .centered {
+        padding-top: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+* ----------------------------------------
+* Animated button at the sides of the page
+* ----------------------------------------
+*/
+
 .button-animated {
-    width: 100px;
+    width: 50px;
     height: 200px;
     font-size: 4em;
     color: white;
@@ -40,7 +72,8 @@ a:hover {
     border: none;
     cursor: pointer;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    bottom:40%;
     border-radius: 100px;
     text-decoration: none;
     text-align: center;
@@ -48,7 +81,6 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
-
 
 .button-animated .button-animated-text {
     transition: all 0.2s;
@@ -80,7 +112,7 @@ a:hover {
     transform: rotate(-90deg);
 }
 
-.button-animated::after {   
+.button-animated::after {
     background: white;
     content: "";
     width: 400px;
@@ -98,23 +130,38 @@ a:hover {
     transition: all 0.2s;
 }
 
-
 .fixed-right {
     position: absolute;
     right: 10px;
 }
-
 
 .fixed-left {
     position: absolute;
     left: 10px;
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     .fixed-right {
-        bottom: 0px;
+        bottom: 20px;
     }
+
     .fixed-left {
-        bottom: 0px;
+        bottom: 20px;
+    }
+
+    .button-animated {
+        height: 50px;
+    }
+
+    .button-animated:hover .button-animated-hover {
+        font-size: 0px;
+    }
+
+    .button-animated:hover .button-animated-text {
+        font-size: 1.4em;
+    }
+
+    .button-animated:hover::after {
+        top: 230%;
     }
 }

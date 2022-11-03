@@ -1,23 +1,21 @@
+
 #portada {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #portada h1, h2, h4, p {
-    color: #eaeaea;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 #portada h1 {
     font-size: 1.4em;
 }
 
-h1 {
-    font-family: Oswald;
-}
+
 
 #portada-footer {
     background: linear-gradient(180deg, #2a2a2a 0%, #1d1d1d 100%);
@@ -25,4 +23,15 @@ h1 {
     height: 10vh;
     position: absolute;
     bottom: 0;
+}
+
+
+@media (min-width:600px){
+    #portada {
+        height: 100vh;
+    }
+
+    #portada h1, h2, h4, p {
+        font-size: 1.2;
+    }
 }
