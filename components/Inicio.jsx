@@ -1,36 +1,24 @@
-//* Módulos
-import { useEffect } from 'react';
-
-
 export default function Inicio() {
-
-
-
     return (
-        <div className="container-index">
+        <section id='portada' >
+            <div style={{ maxWidth: "420px" }} >
+                <h1>
+                    <b>Hello! My name is Carlos Parra</b>.
+                </h1>
+                <p>
+                    I'm a frontend web developer, graphic designer and
+                    UI / UX specialist. Feel free to take a look at my
+                    lastest projects on the <b>web portfolio page</b>.
+                </p>
+                <p>
+                    Remotely avaliable at UTC-6.
+                </p>
+            </div>
 
+            <div id="portada-footer" />
 
-            <section id='portada' >
-                <div >
-                    <h1
-                        className='index-title'
-                        data-aos='zoom-in'
-                        data-aos-delay='800'
-                    >
-                        CARLOS <span>PARRA</span>
-                    </h1>
-                    <h4
-                        className='index-subtitle'
-                        data-aos='zoom-in'
-                        data-aos-delay='1500'
-                    >
-                        DISEÑO WEB / UX
-                    </h4>
-                </div>
-            </section>
+            
 
-
-
-        </div>
+        </section>
     )
 }

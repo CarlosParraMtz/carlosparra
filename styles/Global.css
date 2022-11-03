@@ -5,6 +5,42 @@ Paleta de color:
 #4fa8fb
  */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     background: #2a2a2a;
+}
+
+#portada {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#portada h1, h2, h4, p {
+    color: #eaeaea;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#portada h1 {
+    font-size: 1.4em;
+}
+
+h1 {
+    font-family: Oswald;
+}
+
+#portada-footer {
+    background: linear-gradient(180deg, #2a2a2a 0%, #1d1d1d 100%);
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
 }
