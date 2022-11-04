@@ -1,4 +1,6 @@
-import ButtonRight from "../elements/ButtonRight"
+import SideButton from "../elements/SideButton"
+import Link from 'next/link';
+
 export default function Inicio() {
     return (
         <section id='portada' >
@@ -7,16 +9,19 @@ export default function Inicio() {
                     <b>Hello! My name is Carlos Parra</b>.
                 </h1>
                 <p>
-                    I'm a frontend web developer, graphic designer and
+                    {"I'm "} a frontend web developer, graphic designer and
                     UI / UX specialist. Feel free to take a look at my
-                    latest projects on the <a href="/portfolio"><b>web portfolio page</b>.</a>
+                    latest projects on the
+                    <Link href="/portfolio" passHref>
+                        <a><b>{" web portfolio page."}</b></a>
+                    </Link>
                 </p>
                 <p>
                     Remotely avaliable at UTC-6.
                 </p>
             </div>
 
-            <ButtonRight link="/portfolio" title="Portfolio" />
+            <SideButton link="/portfolio" title="Portfolio" right />
 
         </section>
     )
