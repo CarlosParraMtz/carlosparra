@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-#portada h1, h2, h4, p {
+#portada h1, #portada p {
     text-align: center;
     font-size: 1.1em;
 }
@@ -34,4 +34,14 @@
     #portada h1, h2, h4, p {
         font-size: 1.2;
     }
+}
+
+
+.chips {
+    display: flex;
+    margin-top: 10px;
+}
+
+p {
+    text-align: left;
 }

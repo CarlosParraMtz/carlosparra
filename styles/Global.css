@@ -15,7 +15,7 @@ Paleta de color:
 body {
     background: linear-gradient(180deg, #2a2a2a 90%, #1d1d1d 100%);
     background-attachment: fixed;
-    color: #eaeaea;
+    color: #cbcbcb;
 }
 
 a {
@@ -38,11 +38,11 @@ a:hover {
     padding: 15px;
     padding-top: 140px;
     max-width: 900px;
-    margin:0 auto;
+    margin: 0 auto;
     overflow: auto;
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
     .centered {
         padding-top: 50px;
     }
@@ -73,7 +73,7 @@ a:hover {
     cursor: pointer;
     overflow: hidden;
     position: fixed;
-    bottom:40%;
+    bottom: 40%;
     border-radius: 100px;
     text-decoration: none;
     text-align: center;
@@ -164,4 +164,32 @@ a:hover {
     .button-animated:hover::after {
         top: 230%;
     }
+}
+
+
+
+
+
+
+/*
+* --------------
+* Chip component
+* --------------
+*/
+
+.chip {
+    background: #00000044;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.chip p {
+    text-transform: uppercase;
+    user-select: none;
+    font-size: 0.8em;
 }
