@@ -1,6 +1,8 @@
-import Chip from '../elements/Chip';
-
+//* Components
 import SideButton from "../elements/SideButton";
+import PortfolioCard from "../elements/PortfolioCard";
+import Link from 'next/link';
+import Image from 'next/image';
 
 /* 
 <div className="chips">
@@ -10,7 +12,8 @@ import SideButton from "../elements/SideButton";
 <Chip label="react" />
 </div>
 */
-export default function Portfolio() {
+export default function Portfolio({ data }) {
+    console.log(data)
     return (
         <section id='portfolio'>
             <div className="centered">
@@ -19,6 +22,12 @@ export default function Portfolio() {
                 <p>
                     {"Showing all my finished projects and the ones I'm working on."}
                 </p>
+
+                <div className="portfolio-container" >
+                    {
+                        data.map((d, i) => <PortfolioCard data={d} key={i} />)
+                    }
+                </div>
 
             </div>
 
