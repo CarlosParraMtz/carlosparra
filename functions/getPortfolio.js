@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export default async function getPortfolio() {
-    let posts = await axios.get("https://cdn.contentful.com/spaces/5pd51gqcii3b/entries?access_token=M_mS18camC-Shke9OiX3HXWjZKVdEzyoN8cpJpgC9io")
-        .then(res => (res.data.items.map(item => item.fields)))
-    return posts;
+    return await axios.get(`https://cdn.contentful.com/spaces/${process.env.CF_PORTFOLIO_SPACE}/entries?access_token=${process.env.CF_PORTFOLIO_ACCESSTOKEN}`)
+        .then(res => (res.data.items.map(item => item.fields)));
 }

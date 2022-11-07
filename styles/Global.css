@@ -180,6 +180,9 @@ a:hover {
 
 
 
+
+
+
 /*
 * --------------
 * Chip component
@@ -192,7 +195,6 @@ a:hover {
     width: fit-content;
     padding: 5px 10px;
     display: flex;
-    height: 2.8em;
     align-items: center;
     justify-content: center;
     margin-right: 5px;

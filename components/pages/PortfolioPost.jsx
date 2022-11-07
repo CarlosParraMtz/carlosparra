@@ -15,13 +15,17 @@ export default function PortfolioPost({ data }) {
                         data.skills.map((skill, index) => <Chip key={index} label={skill} />)
                     }
                 </div>
+                
                 <div className="cover-img-container">
                     <Image src={`/portfolio/${data.thumbnail}`} layout="fill" alt={data.projectName} />
                 </div>
 
-                <ReactMarkdown>
-                    {data.content}
-                </ReactMarkdown>
+
+                <div className="portfolio-markdown">
+                    <ReactMarkdown>
+                        {data.content}
+                    </ReactMarkdown>
+                </div>
             </div>
 
             <SideButton link="/portfolio" title="Portfolio" left />

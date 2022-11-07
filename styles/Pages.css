@@ -67,6 +67,24 @@ p {
     position: relative;
     top: 0px;
     transition: all 0.2s;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.portfolio-card::after {
+    content:"";
+    width:90px;
+    height: 500px;
+    position: absolute;
+    background:#ffffff44;
+    transform: rotate(30deg);
+    top: -120px;
+    left: -200px;
+    transition: all 0.4s;
+}
+
+.portfolio-card:hover::after {
+    left: 95%;
+    transition: all 0.4s;
 }
 
 .portfolio-card-hover-content {
@@ -94,9 +112,8 @@ p {
 }
 
 .portfolio-card-title {
-    background: linear-gradient(180deg, #777 0%, #333 100%);
+    background: linear-gradient(180deg, #444 0%, #333 100%);
     padding: 4px;
-    height: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,7 +177,7 @@ p {
     overflow: auto;
 }
 
-.centered p {
+.portfolio-markdown p {
     font-size: 1.2em;
     margin: 1.5em 0;
 }
