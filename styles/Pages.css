@@ -142,3 +142,35 @@ p {
 .portfolio-img-container img {
     object-fit: cover;
 }
+
+
+
+
+
+
+
+
+
+.centered-portfolio {
+    padding: 15px;
+    padding-top: 100px;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.centered p {
+    font-size: 1.2em;
+    margin: 1.5em 0;
+}
+
+.cover-img-container {
+    margin: 50px auto;
+    width: 100%;
+    height: 280px;
+    position: relative;
+}
+
+.cover-img-container img {
+    object-fit: cover;
+}

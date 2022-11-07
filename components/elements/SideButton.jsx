@@ -13,22 +13,24 @@ export default function SideButton({ link, title, left = false, right = false })
 
     return (
 
-        <button
-            className={`button-animated ba-${lorr()} fixed-${lorr()}`}
-            onClick={() => router.push(link)}
-        >
-            {left &&
-                <span className="button-animated-text" >
-                    {"<"}
-                </span>
-            }
-            <span className="button-animated-hover" > {title} </span>
-            {right &&
-                <span className="button-animated-text" >
-                    {">"}
-                </span>
-            }
-        </button>
+        <div className={`animated-button-container ${lorr()}`}>
+            <button
+                className={`button-animated ba-${lorr()} fixed-${lorr()}`}
+                onClick={() => router.push(link)}
+            >
+                {left &&
+                    <span className="button-animated-text" >
+                        {"<"}
+                    </span>
+                }
+                <span className="button-animated-hover" > {title} </span>
+                {right &&
+                    <span className="button-animated-text" >
+                        {">"}
+                    </span>
+                }
+            </button>
+        </div>
 
     )
 }
