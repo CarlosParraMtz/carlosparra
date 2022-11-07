@@ -156,14 +156,7 @@ a:hover {
     left: 10px;
 }
 
-@media (max-width:600px) {
-    .fixed-right {
-        bottom: 20px;
-    }
-
-    .fixed-left {
-        bottom: 20px;
-    }
+@media (max-width:1000px) {
 
     .button-animated {
         height: 50px;
@@ -197,11 +190,13 @@ a:hover {
     background: #00000044;
     border-radius: 5px;
     width: fit-content;
-    padding: 10px;
+    padding: 5px 10px;
     display: flex;
+    height: 2.8em;
     align-items: center;
     justify-content: center;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .chip p {
