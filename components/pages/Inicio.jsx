@@ -1,5 +1,6 @@
 import SideButton from "../elements/SideButton"
 import Link from 'next/link';
+import ButtonsPair from "../elements/ButtonsPair";
 
 export default function Inicio() {
     return (
@@ -21,7 +22,9 @@ export default function Inicio() {
                 </p>
             </div>
 
-            <SideButton link="/portfolio" title="Portfolio" right />
+            <ButtonsPair
+                right={{ link: "/portfolio", title:"Portfolio" }}
+            />
 
         </section>
     )

@@ -73,6 +73,28 @@ a:hover {
     justify-content: center;
 }
 
+.buttons-pair-sm-container {
+    display: none;
+}
+
+@media (max-width:1000px) {
+    .animated-button-container {
+        display: none;
+    }
+
+    .buttons-pair-sm-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        width: 100%;
+        background: #2a2a2a;
+    }
+}
+
 .left {
     left: 0;
 }

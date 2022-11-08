@@ -3,6 +3,7 @@ import SideButton from "../elements/SideButton";
 import PortfolioCard from "../elements/PortfolioCard";
 import Link from 'next/link';
 import Image from 'next/image';
+import ButtonsPair from "../elements/ButtonsPair";
 
 /* 
 <div className="chips">
@@ -13,7 +14,7 @@ import Image from 'next/image';
 </div>
 */
 export default function Portfolio({ data }) {
-    console.log(data)
+
     return (
         <section id='portfolio'>
             <div className="centered">
@@ -34,15 +35,11 @@ export default function Portfolio({ data }) {
 
 
 
+            <ButtonsPair
+                left={{ link: "/", title: "Home" }}
+                right={{ link: "/contact", title: "Contact" }}
+            />
 
-
-
-            <div className="animated-button-container left" >
-                <SideButton link="/" title="Home" left />
-            </div>
-            <div className="animated-button-container left" >
-                <SideButton link="/contact" title="Contact" right />
-            </div>
 
         </section>
     )

@@ -3,6 +3,7 @@ import SideButton from '../elements/SideButton';
 import ReactMarkdown from 'react-markdown';
 import Image from "next/image";
 import Chip from '../elements/Chip';
+import ButtonsPair from '../elements/ButtonsPair';
 
 export default function PortfolioPost({ data }) {
     return (
@@ -15,7 +16,7 @@ export default function PortfolioPost({ data }) {
                         data.skills.map((skill, index) => <Chip key={index} label={skill} />)
                     }
                 </div>
-                
+
                 <div className="cover-img-container">
                     <Image src={`/portfolio/${data.thumbnail}`} layout="fill" alt={data.projectName} />
                 </div>
@@ -28,7 +29,7 @@ export default function PortfolioPost({ data }) {
                 </div>
             </div>
 
-            <SideButton link="/portfolio" title="Portfolio" left />
+            <ButtonsPair left={{ link: "/", title: "Home" }} />
 
         </>
     )
