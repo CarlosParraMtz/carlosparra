@@ -13,7 +13,7 @@ export default function SideButton({ link, title, left = false, right = false })
 
     return (
 
-        <div className={`animated-button-container ${lorr()}`}>
+        
             <button
                 className={`button-animated ba-${lorr()} fixed-${lorr()}`}
                 onClick={() => router.push(link)}
@@ -30,7 +30,7 @@ export default function SideButton({ link, title, left = false, right = false })
                     </span>
                 }
             </button>
-        </div>
+        
 
     )
 }

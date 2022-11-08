@@ -32,8 +32,17 @@ export default function Portfolio({ data }) {
             </div>
 
 
-            <SideButton link="/" title="Home" left />
-            <SideButton link="/contact" title="Contact" right />
+
+
+
+
+
+            <div className="animated-button-container left" >
+                <SideButton link="/" title="Home" left />
+            </div>
+            <div className="animated-button-container left" >
+                <SideButton link="/contact" title="Contact" right />
+            </div>
 
         </section>
     )
