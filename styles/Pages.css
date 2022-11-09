@@ -236,6 +236,7 @@ p {
     color: white;
     overflow: hidden;
     cursor: pointer;
+    width:250px;
 }
 
 .contact-social-buttons a button::before {
