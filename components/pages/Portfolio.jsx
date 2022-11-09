@@ -4,6 +4,7 @@ import PortfolioCard from "../elements/PortfolioCard";
 import Link from 'next/link';
 import Image from 'next/image';
 import ButtonsPair from "../elements/ButtonsPair";
+import { motion } from "framer-motion";
 
 /* 
 <div className="chips">
@@ -17,7 +18,14 @@ export default function Portfolio({ data }) {
 
     return (
         <section id='portfolio'>
-            <div className="centered">
+            <motion.div
+                initial={{ y: 90, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                    delay: 0.5,
+                    duration: 1
+                }}
+                className="centered">
                 <h1>Web developer portfolio</h1>
 
                 <p>
@@ -30,7 +38,7 @@ export default function Portfolio({ data }) {
                     }
                 </div>
 
-            </div>
+            </motion.div>
 
 
 

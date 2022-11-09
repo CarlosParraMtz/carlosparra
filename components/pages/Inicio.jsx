@@ -1,11 +1,19 @@
 import SideButton from "../elements/SideButton"
 import Link from 'next/link';
 import ButtonsPair from "../elements/ButtonsPair";
+import { motion } from "framer-motion";
 
 export default function Inicio() {
     return (
         <section id='portada' >
-            <div style={{ maxWidth: "420px" }} >
+            <motion.div
+                initial={{ y: 90, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                    delay: 1,
+                    duration: 1
+                }}
+                style={{ maxWidth: "420px" }} >
                 <h1>
                     <b>Hello! My name is Carlos Parra</b>.
                 </h1>
@@ -20,10 +28,10 @@ export default function Inicio() {
                 <p>
                     Remotely avaliable at UTC-6.
                 </p>
-            </div>
+            </motion.div>
 
             <ButtonsPair
-                right={{ link: "/portfolio", title:"Portfolio" }}
+                right={{ link: "/portfolio", title: "Portfolio" }}
             />
 
         </section>
