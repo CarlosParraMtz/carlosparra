@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
           animate="animateState"
           exit="exitState"
           transition={{
+            delay:0.5,
             duration:1
           }}
           variants={{
