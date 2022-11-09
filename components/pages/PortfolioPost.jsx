@@ -29,7 +29,7 @@ export default function PortfolioPost({ data }) {
                 </div>
             </div>
 
-            <ButtonsPair left={{ link: "/", title: "Home" }} />
+            <ButtonsPair left={{ link: "/portfolio", title: "Portfolio" }} />
 
         </>
     )
