@@ -18,27 +18,51 @@ export default function Portfolio({ data }) {
 
     return (
         <section id='portfolio'>
-            <motion.div
-                initial={{ y: 90, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{
-                    delay: 0.5,
-                    duration: 1
-                }}
-                className="centered">
-                <h1>Web developer portfolio</h1>
+            <div className="centered">
+                <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 5, opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                        delay: 0.3,
+                        duration: 0.5
+                    }}
+                >
+                    <h1>Web developer portfolio</h1>
+                </motion.div>
 
-                <p>
+
+                <motion.p
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 5, opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                        delay: 0.8,
+                        duration: 0.5
+                    }}>
                     {"Showing all my finished projects and the ones I'm working on."}
-                </p>
+                </motion.p>
 
-                <div className="portfolio-container" >
+
+                <motion.div
+                    initial={{ x: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                        delay: 1.3,
+                        duration: 0.5
+                    }}
+                    className="portfolio-container" >
                     {
-                        data.map((d, i) => <PortfolioCard data={d} key={i} />)
-                    }
-                </div>
+                        data.map((d, i) => (
 
-            </motion.div>
+                            <PortfolioCard data={d} i={i} key={i} />
+
+                        ))
+                    }
+                </motion.div>
+
+            </div>
 
 
 

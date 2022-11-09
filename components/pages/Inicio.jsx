@@ -4,31 +4,55 @@ import ButtonsPair from "../elements/ButtonsPair";
 import { motion } from "framer-motion";
 
 export default function Inicio() {
+    const variantes = {
+        initialState: { x: -30, opacity: 0 },
+        animateState: { x: 0, opacity: 1 },
+        exitState: { x: 30, opacity: 0 }
+    }
     return (
         <section id='portada' >
-            <motion.div
-                initial={{ y: 90, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{
-                    delay: 1,
-                    duration: 1
-                }}
-                style={{ maxWidth: "420px" }} >
-                <h1>
+            <div style={{ maxWidth: "420px" }} >
+                <motion.h1
+                    initial="initialState"
+                    animate="animateState"
+                    exit={{ opacity: 0 }}
+                    variants={variantes}
+                    transition={{
+                        delay: 0.3, duration: 0.3
+                    }}
+                >
                     <b>Hello! My name is Carlos Parra</b>.
-                </h1>
-                <p>
+                </motion.h1>
+
+                <motion.p
+                    initial="initialState"
+                    animate="animateState"
+                    exit={{ opacity: 0 }}
+                    variants={variantes}
+                    transition={{
+                        delay: 0.8, duration: 0.3
+                    }}
+                >
                     {"I'm "} a frontend web developer, graphic designer and
                     UI / UX specialist. Feel free to take a look at my
                     latest projects on the
                     <Link href="/portfolio" passHref>
                         <a><b>{" web portfolio page."}</b></a>
                     </Link>
-                </p>
-                <p>
+                </motion.p>
+
+                <motion.p
+                    initial="initialState"
+                    animate="animateState"
+                    exit={{ opacity: 0 }}
+                    variants={variantes}
+                    transition={{
+                        delay: 1.5, duration: 0.3
+                    }}
+                >
                     Remotely avaliable at UTC-6.
-                </p>
-            </motion.div>
+                </motion.p>
+            </div>
 
             <ButtonsPair
                 right={{ link: "/portfolio", title: "Portfolio" }}

@@ -1,10 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-export default function PortfolioCard({ data }) {
+export default function PortfolioCard({ data, i }) {
     return (
         <Link href={`/portfolio/${data.slug}`} >
-            <a className="portfolio-card">
+            <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 0.8 + (0.1 * i) }}
+                className="portfolio-card" style={{cursor:"pointer"}} >
 
                 <div className="portfolio-card-title">
                     <div className="dots-container">
@@ -36,7 +42,7 @@ export default function PortfolioCard({ data }) {
 
 
 
-            </a>
+            </motion.a>
         </Link>
     )
 }

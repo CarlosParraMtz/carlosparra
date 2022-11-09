@@ -1,45 +1,57 @@
 import React from 'react'
 import ButtonsPair from '../elements/ButtonsPair'
 import ContactButton from '../elements/ContactButton'
+import Buttons from './Buttons.json'
+import { motion } from 'framer-motion'
+
+
 export default function Contact() {
+
+
 	return (
 		<section>
 			<div className="centered">
-				<h1>Get in touch</h1>
+				<motion.h1
+					initial={{ x: -10, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					exit={{ opacity: 0 }}
+					transition={{ delay: 0.4 }}
+				>Get in touch</motion.h1>
 
-				<p>
+				<motion.p
+					initial={{ x: -10, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					exit={{ opacity: 0 }}
+					transition={{ delay: 0.9 }}
+				>
 					If you wanna get in touch or talk
 					about a project collaboration,
 					text me, or follow me in social media!
-				</p>
+				</motion.p>
 
 
 
 				<div className="contact-social-buttons">
 
-
-					<ContactButton link="https://wa.me/522281259898"
-						color="#15c356" image="whatsapp" title="Whatsapp"
-					/>
-					<ContactButton link="https://t.me/CarlosParraMtz"
-						color="#4277bd" image="telegram" title="Telegram"
-					/>
-					<ContactButton link="https://twitter.com/devCarlosParra"
-						color="#1DA1F2" image="twitter" title="Twitter"
-					/>
-					<ContactButton link="https://www.linkedin.com/in/carlosparramtz/"
-						color="#0077b5" image="linkedin" title="LinkedIn"
-					/>
-					<ContactButton link="https://github.com/CarlosParraMtz"
-						color="#171515" image="github" title="Github"
-					/>
-
+					{
+						Buttons.map((button, i) => <ContactButton
+							key={i} i={i}
+							link={button.link}
+							color={button.color}
+							image={button.image}
+							title={button.title}
+						/>)
+					}
 
 				</div>
 
-				<p>
+				<motion.p
+					initial={{ x: -10, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					exit={{ opacity: 0 }}
+					transition={{ delay: 2 }}>
 					See you in the other side!
-				</p>
+				</motion.p>
 
 			</div>
 
