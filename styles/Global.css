@@ -13,8 +13,7 @@ Paleta de color:
 }
 
 body {
-    background: linear-gradient(180deg, #2a2a2a 90%, #1d1d1d 100%);
-    background-attachment: fixed;
+    background: #2a2a2a;
     color: #cbcbcb;
 }
 
@@ -46,12 +45,15 @@ a:hover {
     .centered {
         padding-top: 50px;
     }
+
+    section, article {
+        padding-bottom: 150px;
+    }
 }
 
 p {
     font-size: 1.4em;
 }
-
 
 
 
@@ -228,4 +230,75 @@ p {
     text-transform: uppercase;
     user-select: none;
     font-size: 0.8em;
+}
+
+
+
+
+
+
+
+/*
+* --------
+* Nav menu
+* --------
+*/
+
+.nav-menu-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+
+    background: #4f4f4f;
+    color: white;
+}
+
+.nav-menu-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #3a3a3a;
+}
+
+.nav-link {
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    background: #444;
+
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    font-size: 2em;
+
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    background: #4a4a4a;
 }

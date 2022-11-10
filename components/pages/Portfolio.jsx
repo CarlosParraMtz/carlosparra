@@ -37,7 +37,7 @@ export default function Portfolio({ data }) {
                     animate={{ x: 5, opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{
-                        delay: 0.8,
+                        delay: 0.6,
                         duration: 0.5
                     }}>
                     {"Showing all my finished projects and the ones I'm working on."}
@@ -49,7 +49,7 @@ export default function Portfolio({ data }) {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{
-                        delay: 1.3,
+                        delay: 0.9,
                         duration: 0.5
                     }}
                     className="portfolio-container" >

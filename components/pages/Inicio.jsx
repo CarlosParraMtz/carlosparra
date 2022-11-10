@@ -30,7 +30,7 @@ export default function Inicio() {
                     exit={{ opacity: 0 }}
                     variants={variantes}
                     transition={{
-                        delay: 0.8, duration: 0.3
+                        delay: 0.6, duration: 0.3
                     }}
                 >
                     {"I'm "} a frontend web developer, graphic designer and
@@ -47,7 +47,7 @@ export default function Inicio() {
                     exit={{ opacity: 0 }}
                     variants={variantes}
                     transition={{
-                        delay: 1.5, duration: 0.3
+                        delay: 0.9, duration: 0.3
                     }}
                 >
                     Remotely avaliable at UTC-6.

@@ -3,6 +3,7 @@ import '../styles/Pages.css'
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from "framer-motion"
+import NavMenu from '../components/elements/NavMenu';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
+      <NavMenu />
     </>
   )
 }

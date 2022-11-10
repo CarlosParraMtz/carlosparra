@@ -8,14 +8,14 @@ import { motion } from 'framer-motion';
 
 export default function PortfolioPost({ data }) {
     return (
-        <>
+        <article>
             <div className="centered">
 
                 <motion.h1
                     initial={{ x: -10, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.3 }}
                 > {data.projectName}
                 </motion.h1>
 
@@ -29,7 +29,7 @@ export default function PortfolioPost({ data }) {
                     initial={{ y: -10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ delay: 0.8 }}
+                    transition={{ delay: 0.6 }}
                     className="cover-img-container">
                     <Image src={`/portfolio/${data.thumbnail}`} layout="fill" alt={data.projectName} />
                 </motion.div>
@@ -39,7 +39,7 @@ export default function PortfolioPost({ data }) {
                     initial={{ y: 25, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ delay: 1.5 }}
+                    transition={{ delay: 0.9 }}
                     className="portfolio-markdown">
                     <ReactMarkdown>
                         {data.content}
@@ -49,6 +49,6 @@ export default function PortfolioPost({ data }) {
 
             <ButtonsPair left={{ link: "/portfolio", title: "Portfolio" }} />
 
-        </>
+        </article>
     )
 }

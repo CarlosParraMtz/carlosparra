@@ -27,13 +27,6 @@ export default function ButtonsPair({ left = null, right = null }) {
 
 
 
-			<div className='buttons-pair-sm-container'>
-				{left && <SideButton link={left.link} title={left.title} left />}
-				{right && <SideButton link={right.link} title={right.title} right />}
-			</div>
-
-
-
 
 		</motion.div>
 	)
