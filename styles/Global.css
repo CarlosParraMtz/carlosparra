@@ -258,6 +258,11 @@ p {
 
     background: #4f4f4f;
     color: white;
+    transition: all 0.5s;
+}
+
+.nav-menu-btn:hover {
+    background: #555;
 }
 
 .nav-menu-screen {
