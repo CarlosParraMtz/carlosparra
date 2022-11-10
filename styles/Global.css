@@ -254,6 +254,7 @@ p {
     height: 50px;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
 
     background: #4f4f4f;
     color: white;
