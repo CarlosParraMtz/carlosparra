@@ -12,15 +12,17 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" />
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css' />
       </Head>
-      <AnimatePresence exitBeforeEnter >
+      <AnimatePresence mode="wait" >
         <motion.div
           key={router.route}
-          
+
         >
-          <Component {...pageProps} />
+          <main>
+            <Component {...pageProps} />
+          </main>
         </motion.div>
       </AnimatePresence>
       <NavMenu />
