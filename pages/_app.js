@@ -16,10 +16,7 @@ function MyApp({ Component, pageProps }) {
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css' />
       </Head>
       <AnimatePresence mode="wait" >
-        <motion.div
-          key={router.route}
-
-        >
+        <motion.div key={router.route} >
           <main>
             <Component {...pageProps} />
           </main>
