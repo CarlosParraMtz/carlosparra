@@ -32,14 +32,14 @@ export default function DarkModeSwitch() {
             className={`
                 fixed right-10 top-10 
                 rounded-full h-10 w-16 p-2
-                dark:bg-gray-700 bg-gray-300
+                bg-[#ffffff77]
                 cursor-pointer
                 flex items-center
                 transition-colors
                 ${dark ? "justify-end" : "justify-start"}
             `} >
             <motion.div
-                className="w-6 h-6 bg-black dark:bg-white rounded-full transition-colors"
+                className="w-6 h-6 bg-black dark:bg-white rounded-full transition-colors shadow"
                 layout
                 transition={spring}
             />
