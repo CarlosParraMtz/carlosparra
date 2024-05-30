@@ -8,8 +8,8 @@ import TechTabs from '../components/TechTabs.jsx'
 export default function Index() {
     return (
         <>
-            <main className='mx-auto dark:bg-black bg-blue-300 dark:text-white transition-colors max-w-screen overflow-x-hidden relative' >
-                <header className="w-screen overflow-hidden h-screen" >
+            <main className='mx-auto dark:bg-black bg-gray-300 dark:text-white transition-colors max-w-screen overflow-x-hidden relative' >
+                <header className="w-screen overflow-hidden h-screen bg-blue-200 dark:bg-black transition-colors" >
                     <MeshGradient />
                     <div className='relative flex flex-col justify-center items-center gap-2 h-full ' >
                         <motion.div
@@ -80,12 +80,12 @@ export default function Index() {
 
                 </section>
                 <section className='px-5 py-14 md:py-32 w-full relative' >
-                    <div className="container max-w-6xl mx-auto">
+                    <div className="container max-w-4xl mx-auto">
 
                         <h3 className='text-4xl'><b>Mis habilidades</b></h3>
                         <div className="flex flex-col md:flex-row gap-7">
                             <TechTabs />
-                            <div className='flex-1 pt-10 h-10 w-full flex flex-col' >
+                            <div className='flex-1 pt-0 md:pt-10 h-10 w-full flex flex-col' >
                                 <div className="flex gap-5 items-center mb-5 mx-auto md:mx-0">
                                     <i className="fa-solid fa-pen-nib text-2xl"></i>
                                     <h4 className="text-2xl" >Diseño</h4>
@@ -107,13 +107,13 @@ export default function Index() {
                                         <i className="fa-brands fa-figma text-4xl"></i>
                                     </h3>
                                 </div>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto md:mx-0">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto md:mx-0 mt-5 md:mt-0">
                                     <div className="flex flex-col">
                                         <div className="flex gap-5 items-center my-5">
                                             <i className="fa-solid fa-screwdriver-wrench text-2xl"></i>
                                             <h4 className="text-2xl" >Herramientas</h4>
                                         </div>
-                                        <ul className="flex flex-col gap-1">
+                                        <ul className="flex flex-col gap-1 text-center sm:text-left">
                                             <li><i className="fa-solid fa-check"></i> Git + github </li>
                                             <li><i className="fa-solid fa-check"></i> Terminal </li>
                                             <li><i className="fa-solid fa-check"></i> Visual studio code </li>
@@ -126,7 +126,7 @@ export default function Index() {
                                             <i className="fa-solid fa-brain text-2xl"></i>
                                             <h4 className="text-2xl" >Conocimientos</h4>
                                         </div>
-                                        <ul className="flex flex-col gap-1">
+                                        <ul className="flex flex-col gap-1 text-center sm:text-left">
                                             <li><i className="fa-solid fa-check"></i> Diseño responsivo </li>
                                             <li><i className="fa-solid fa-check"></i> ECMAScript 6 </li>
                                             <li><i className="fa-solid fa-check"></i> Prácticas SEO </li>
