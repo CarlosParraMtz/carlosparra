@@ -55,9 +55,8 @@ export default function Index() {
                 >
                     <motion.div
 
-                        initial={{ opacity: 0, x: -500 }}
+                        initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0, type: "spring" }}
                         className=" backdrop-blur-sm w-full rounded-xl border bg-[#ffffff77] dark:bg-[#00000047] text-black p-2 transition-colors max-w-6xl mx-auto "
                     >
                         <h2 className="text-4xl text-black dark:text-white text-center mb-5 transition-colors" >Lo que hago</h2>
@@ -87,11 +86,11 @@ export default function Index() {
                         <div className="flex flex-col md:flex-row gap-7">
                             <TechTabs />
                             <div className='flex-1 pt-10 h-10 w-full flex flex-col' >
-                                <div className="flex gap-5 items-center mb-5">
+                                <div className="flex gap-5 items-center mb-5 mx-auto md:mx-0">
                                     <i className="fa-solid fa-pen-nib text-2xl"></i>
                                     <h4 className="text-2xl" >Diseño</h4>
                                 </div>
-                                <div className="flex gap-5">
+                                <div className="flex gap-5 mx-auto md:mx-0">
                                     <div className='border-black dark:border-white border-4 flex items-center justify-center text-2xl font-bold w-10 h-10 transition-colors' >
                                         Ps
                                     </div>
@@ -108,11 +107,11 @@ export default function Index() {
                                         <i className="fa-brands fa-figma text-4xl"></i>
                                     </h3>
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto md:mx-0">
                                     <div className="flex flex-col">
                                         <div className="flex gap-5 items-center my-5">
                                             <i className="fa-solid fa-screwdriver-wrench text-2xl"></i>
-                                            <h4 className="text-2xl" >Mis herramientas</h4>
+                                            <h4 className="text-2xl" >Herramientas</h4>
                                         </div>
                                         <ul className="flex flex-col gap-1">
                                             <li><i className="fa-solid fa-check"></i> Git + github </li>
@@ -125,7 +124,7 @@ export default function Index() {
                                     <div className="flex flex-col">
                                         <div className="flex gap-5 items-center my-5">
                                             <i className="fa-solid fa-brain text-2xl"></i>
-                                            <h4 className="text-2xl" >Mis conocimientos</h4>
+                                            <h4 className="text-2xl" >Conocimientos</h4>
                                         </div>
                                         <ul className="flex flex-col gap-1">
                                             <li><i className="fa-solid fa-check"></i> Diseño responsivo </li>
