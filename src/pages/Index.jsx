@@ -55,7 +55,7 @@ export default function Index() {
                 >
                     <motion.div
 
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         className=" backdrop-blur-sm w-full rounded-xl border bg-[#ffffff77] dark:bg-[#00000047] text-black p-2 transition-colors max-w-6xl mx-auto "
                     >
