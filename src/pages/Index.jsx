@@ -1,9 +1,9 @@
 import carlos from '../assets/carlos.png'
-import Experience from '../components/Experience.jsx'
 import ProjectLink from '../components/ProjectLink.jsx'
 import MeshGradient from '../components/MeshGradient.jsx'
 import { motion } from 'framer-motion'
 import TechTabs from '../components/TechTabs.jsx'
+import Timeline from '../components/Timeline.jsx'
 
 export default function Index() {
     return (
@@ -142,25 +142,20 @@ export default function Index() {
                     </div>
                 </section>
 
-                <section>
-                    <h3 className='text-xl'><b>Experiencia</b></h3>
-                    <div className='flex flex-col gap-2 py-5' >
-                        <Experience
-                            date="Oct/2023 - Actualidad" title="Jcoding"
-                            description="Desarrollo frontend con frameworks de javascript como React.js, Next.js y Vue, Desarrollo de backend javascript y ASP.NET. Diseño UX / UI, y manejo de bases de datos."
-                        />
-                        <Experience
-                            date="Oct/2021 - Oct/2023" title="Smartware"
-                            description="Desarrollo frontend con Next.js firebase y Diseño UX / UI. Enfocado principalmente en el mantenimiento de un Saas para coaching de nicho."
-                        />
+                <section className="px-5 w-full relative" >
+                    <div className='max-w-4xl w-full mx-auto' >
+                        <h3 className='text-4xl'><b>Mi experiencia</b></h3>
+
+                        <Timeline />
                     </div>
+
                 </section>
 
                 <section className='px-5 py-10 w-full' >
-                    <h3 className='text-xl'><b>Algunos de mis proyectos</b></h3>
+                   {/*  <h3 className='text-xl'><b>Algunos de mis proyectos</b></h3>
                     <div className='grid grid-cols-2 sm:grid-cols-3' >
                         <ProjectLink />
-                    </div>
+                    </div> */}
                 </section>
 
             </main>
