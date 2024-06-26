@@ -7,12 +7,12 @@ const allTabs = [
     { icon: <i className="fa-solid fa-network-wired"></i>, label: "Backend" },
 ]
 
-export default function TechTabs() {
+export default function TechTabs({animProps}) {
 
 
     const [selectedTab, setSelectedTab] = useState(0)
     return (
-        <div className="pt-10 max-w-xs w-full mx-auto">
+        <motion.div {...animProps} className="pt-10 max-w-xs w-full mx-auto">
             <div className="flex gap-5 items-center mb-5">
                 <i className="fa-solid fa-gears text-2xl"></i>
                 <h4 className="text-2xl" >Desarrollo</h4>
@@ -89,6 +89,6 @@ export default function TechTabs() {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }

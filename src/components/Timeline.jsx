@@ -1,8 +1,9 @@
 import Experience from './Experience';
+import { motion } from 'framer-motion';
 
-const Timeline = () => {
+const Timeline = ({animProps}) => {
     return (
-        <div className="relative flex items-start w-full border-b-2 mt-10 border-gray-900 dark:border-gray-600 transition-colors">
+        <motion.div {...animProps} className="relative flex items-start w-full border-b-2 mt-10 border-gray-900 dark:border-gray-600 transition-colors">
             {/* Línea vertical */}
             <div className="absolute w-1 h-full bg-gray-400 left-5 dark:bg-gray-700 transition-colors"></div>
 
@@ -17,7 +18,7 @@ const Timeline = () => {
                     description="Desarrollo frontend con Next.js firebase y Diseño UX / UI. Enfocado principalmente en el mantenimiento de un Saas para coaching de nicho."
                 />
             </div>
-        </div>
+        </motion.div>
     );
 }
 

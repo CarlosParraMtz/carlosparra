@@ -1,21 +1,25 @@
 import carlos from '../assets/carlos.png'
-import ProjectLink from '../components/ProjectLink.jsx'
+//import ProjectLink from '../components/ProjectLink.jsx'
 import MeshGradient from '../components/MeshGradient.jsx'
 import { motion } from 'framer-motion'
 import TechTabs from '../components/TechTabs.jsx'
 import Timeline from '../components/Timeline.jsx'
+import SendMailForm from '../components/SendMailForm.jsx'
+import animProps from '../config/animationProps.js'
+
+
 
 export default function Index() {
     return (
         <>
-            <main className='mx-auto dark:bg-black bg-gray-300 dark:text-white transition-colors max-w-screen overflow-x-hidden relative' >
+            <main className='mx-auto dark:bg-black bg-gray-300 dark:text-white transition-colors max-w-screen overflow-hidden relative' >
                 <header className="w-screen overflow-hidden h-screen bg-blue-200 dark:bg-black transition-colors" >
                     <MeshGradient />
                     <div className='relative flex flex-col justify-center items-center gap-2 h-full ' >
                         <motion.div
                             initial={{ y: -50, opacity: 0 }}
                             animate={{ y: 0, opacity: 1, }}
-                            transition={{ duration: 2 }}
+                            transition={{ delay: 0.3, duration: 2 }}
                             className='rounded-full h-20 w-20 overflow-hidden border-4 border-black dark:border-gray-100 transition-colors'
                         >
                             <img src={carlos} alt="Carlos Parra" className='dark:bg-blue-900 bg-blue-200 transition-colors' />
@@ -54,9 +58,7 @@ export default function Index() {
                     }}
                 >
                     <motion.div
-
-                        initial={{ opacity: 0, x: -100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        {...animProps}
                         className=" backdrop-blur-sm w-full rounded-xl border bg-[#ffffff77] dark:bg-[#00000047] text-black p-2 transition-colors max-w-6xl mx-auto "
                     >
                         <h2 className="text-4xl text-black dark:text-white text-center mb-5 transition-colors" >Lo que hago</h2>
@@ -82,15 +84,15 @@ export default function Index() {
                 <section className='px-5 py-14 md:py-32 w-full relative' >
                     <div className="container max-w-4xl mx-auto">
 
-                        <h3 className='text-4xl'><b>Mis habilidades</b></h3>
+                        <motion.h3 className='text-4xl' {...animProps} ><b>Mis habilidades</b></motion.h3>
                         <div className="flex flex-col md:flex-row gap-7">
-                            <TechTabs />
+                            <TechTabs animProps={animProps} />
                             <div className='flex-1 pt-0 md:pt-10 h-10 w-full flex flex-col' >
-                                <div className="flex gap-5 items-center mb-5 mx-auto md:mx-0">
+                                <motion.div {...animProps} className="flex gap-5 items-center mb-5 mx-auto md:mx-0">
                                     <i className="fa-solid fa-pen-nib text-2xl"></i>
                                     <h4 className="text-2xl" >Diseño</h4>
-                                </div>
-                                <div className="flex gap-5 mx-auto md:mx-0">
+                                </motion.div>
+                                <motion.div {...animProps} className="flex gap-5 mx-auto md:mx-0">
                                     <div className='border-black dark:border-white border-4 flex items-center justify-center text-2xl font-bold w-10 h-10 transition-colors' >
                                         Ps
                                     </div>
@@ -106,32 +108,32 @@ export default function Index() {
                                     <h3>
                                         <i className="fa-brands fa-figma text-4xl"></i>
                                     </h3>
-                                </div>
+                                </motion.div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto md:mx-0 mt-5 md:mt-0">
                                     <div className="flex flex-col">
-                                        <div className="flex gap-5 items-center my-5">
+                                        <motion.div {...animProps} className="flex gap-5 items-center my-5">
                                             <i className="fa-solid fa-screwdriver-wrench text-2xl"></i>
                                             <h4 className="text-2xl" >Herramientas</h4>
-                                        </div>
-                                        <ul className="flex flex-col gap-1 text-center sm:text-left">
+                                        </motion.div>
+                                        <motion.ul {...animProps} className="flex flex-col gap-1 text-center sm:text-left">
                                             <li><i className="fa-solid fa-check"></i> Git + github </li>
                                             <li><i className="fa-solid fa-check"></i> Terminal </li>
                                             <li><i className="fa-solid fa-check"></i> Visual studio code </li>
                                             <li><i className="fa-solid fa-check"></i> Postman </li>
                                             <li><i className="fa-solid fa-check"></i> Notion </li>
-                                        </ul>
+                                        </motion.ul>
                                     </div>
                                     <div className="flex flex-col">
-                                        <div className="flex gap-5 items-center my-5">
+                                        <motion.div {...animProps} className="flex gap-5 items-center my-5">
                                             <i className="fa-solid fa-brain text-2xl"></i>
                                             <h4 className="text-2xl" >Conocimientos</h4>
-                                        </div>
-                                        <ul className="flex flex-col gap-1 text-center sm:text-left">
+                                        </motion.div>
+                                        <motion.ul {...animProps} className="flex flex-col gap-1 text-center sm:text-left">
                                             <li><i className="fa-solid fa-check"></i> Diseño responsivo </li>
                                             <li><i className="fa-solid fa-check"></i> ECMAScript 6 </li>
                                             <li><i className="fa-solid fa-check"></i> Prácticas SEO </li>
                                             <li><i className="fa-solid fa-check"></i> Diseño de bases de datos </li>
-                                        </ul>
+                                        </motion.ul>
                                     </div>
                                 </div>
 
@@ -144,7 +146,9 @@ export default function Index() {
 
                 <section className="px-5 w-full relative" >
                     <div className='max-w-4xl w-full mx-auto' >
-                        <h3 className='text-4xl'><b>Mi experiencia</b></h3>
+                        <motion.h3 {...animProps} className='text-4xl'>
+                            <b>Mi experiencia</b>
+                        </motion.h3>
 
                         <Timeline />
                     </div>
@@ -152,11 +156,30 @@ export default function Index() {
                 </section>
 
                 <section className='px-5 py-10 w-full' >
-                   {/*  <h3 className='text-xl'><b>Algunos de mis proyectos</b></h3>
+                    {/*  <h3 className='text-xl'><b>Algunos de mis proyectos</b></h3>
                     <div className='grid grid-cols-2 sm:grid-cols-3' >
                         <ProjectLink />
                     </div> */}
                 </section>
+
+                <section className="px-5 pb-5">
+                    <div className='max-w-4xl w-full mx-auto' >
+                        <motion.h3 {...animProps} className='text-4xl'><b>Pongámonos en contacto</b></motion.h3>
+                        <div className="flex flex-col sm:flex-row gap-5 mt-5">
+                            <div className="w-full sm:w-1/2 order-2 sm:order-1">
+                                <SendMailForm />
+                            </div>
+
+                            <motion.div {...animProps} className="order-1 sm:order-2 h-44 sm:h-auto w-full sm:w-1/2 bg-gray-400 dark:bg-gray-700 rounded-2xl transition-colors overflow-hidden">
+                                <img src="/img/mail.jpg" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer className="bg-gray-300 dark:bg-gray-700 p-10 transition-colors mt-10" >
+
+                </footer>
 
             </main>
 
