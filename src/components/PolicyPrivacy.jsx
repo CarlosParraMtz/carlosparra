@@ -54,7 +54,7 @@ export default function PolicyPrivacy() {
             <h2 className="text-xl lg:text-2xl font-bold">5. Tus Derechos</h2>
             <p>
                 Tienes derecho a acceder, corregir, actualizar o eliminar la información personal que
-                me has proporcionado. Si deseas ejercer estos derechos, por favor contáctanos a través
+                me has proporcionado. Si deseas ejercer estos derechos, por favor contáctame a través
                 de <a href="mailto:carlosparramtz@outlook.com"
                     target="_blank"
                     className="text-blue-700 dark:text-blue-400"

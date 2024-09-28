@@ -6,7 +6,7 @@ import TechTabs from '../components/TechTabs.jsx'
 import Timeline from '../components/Timeline.jsx'
 import SendMailForm from '../components/SendMailForm.jsx'
 import animProps from '../config/animationProps.js'
-
+import CaretDown from '../assets/DownCaret.jsx'
 
 
 export default function Index() {
@@ -49,6 +49,14 @@ export default function Index() {
                             Disponible para trabajar
                         </motion.div>
                     </div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 4, duration: 1.5 }}
+                        className='absolute top-[90vh] w-full max-h-10 flex justify-center animate-bounce'
+                    >
+                        <CaretDown />
+                    </motion.div>
                 </header>
 
                 <section
