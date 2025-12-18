@@ -60,10 +60,8 @@ export default function Index() {
                 </header>
 
                 <section
-                    className='w-full p-10 relative bg-fixed bg-cover bg-center'
-                    style={{
-                        backgroundImage: "url('/img/compu.jpg')",
-                    }}
+                    className='w-full p-10 relative bg-fixed bg-cover bg-center bg-gray-800'
+                    
                 >
                     <motion.div
                         {...animProps}
@@ -78,7 +76,7 @@ export default function Index() {
                             </div>
                             <div className='flex flex-col items-center text-black dark:text-white p-5 transition-colors' >
                                 <i className="fa-solid fa-pen-nib text-6xl"></i>
-                                <h3 className="text-2xl text-center">Diseño UI</h3>
+                                <h3 className="text-2xl text-center">Diseño UI / Diseño gráfico</h3>
                             </div>
                             <div className='flex flex-col items-center text-black dark:text-white p-5 transition-colors' >
                                 <i className="fa-solid fa-fingerprint text-center text-6xl"></i>
